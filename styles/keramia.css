@@ -483,3 +483,35 @@ h1 {
     width: 300px;
   }
 }
+/*---------------------------------------------------- */
+
+/*------------------------ Style of product.html-------------- */
+
+.productimage{
+  width: 400px;
+}
+
+.productDetailed {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 20px;
+  font-size: 23px;
+  text-wrap: pretty;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
+  overflow: auto;
+  justify-items:end ;
+  align-items: center;
+}
+
+.productimage1 {
+  width: 50px;
+}
+
+.productimage2 {
+  width: 50px;
+}
+
+
+.productimage3 {
+  width: 50px;
+}
