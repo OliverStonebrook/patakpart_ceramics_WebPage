@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Termék 1",
+    "price": 25,
+    "image": "images/product11.jpeg"
+  },
+  {
+    "name": "Termék 2",
+    "price": 28,
+    "image": "images/product21.jpeg"
+  },
+  {
+    "name": "Termék 3",
+    "price": 31,
+    "image": "images/product33.jpeg"
+  },
+  {
+    "name": "Termék 4",
+    "price": 40,
+    "image": "images/product41.jpeg"
+  },
+
+  {
+    "name": "Termék 5",
+    "price": 24,
+    "image": "images/product41.jpeg"
+  },
+
+  {
+    "name": "Termék 5",
+    "price": 22,
+    "image": "images/product41.jpeg"
+  }
+]
