@@ -7,9 +7,9 @@
     "image1": "images/product11.jpeg",
     "image2": "images/product11.jpeg",
     "image3": "images/product11.jpeg",
-    
     "description": "description"
   },
+
   {
     "id": 2,
     "name": "Termék 2",
@@ -20,6 +20,7 @@
     "image3": "images/product21.jpeg",
     "description": "description"
   },
+
   {
     "id": 3,
     "name": "Termék 3",
@@ -30,6 +31,7 @@
     "image3": "images/product21.jpeg",
     "description": "description"
   },
+
   {
     "id": 4,
     "name": "Termék 4",

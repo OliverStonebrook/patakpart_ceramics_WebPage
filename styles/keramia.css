@@ -131,7 +131,7 @@ q:after {
   --color_5: 255, 203, 5;
   --color_6: 114, 114, 114;
   --color_7: 176, 176, 176;
-  --color_8: 255, 255, 255;
+  --color_8: rgb(244, 239, 232);
   --fontFamily: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -186,11 +186,9 @@ body {
   vertical-align: middle;
 }
 
-
-  #patakPart:hover {
-    rotate: 45deg;
-  }
-
+#patakPart:hover {
+  rotate: 45deg;
+}
 
 @media screen and (max-width: 950px) {
   .headContainer {
@@ -366,12 +364,12 @@ body {
   rotate: -15deg;
 }
 
-.navImage:hover{
+.navImage:hover {
   transform: scale(1.2);
   rotate: -15deg;
 }
 
-.mainheadContainer{
+.mainheadContainer {
   display: grid;
   justify-content: center;
 }
@@ -411,7 +409,6 @@ body {
   width: 35vw;
 }
 
-
 .aboutContainer {
   display: grid;
   grid-template-columns: auto auto;
@@ -420,9 +417,8 @@ body {
   text-wrap: pretty;
   grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
   overflow: auto;
-  justify-items:end ;
+  justify-items: end;
   align-items: center;
-
 }
 
 .aboutText {
@@ -438,11 +434,8 @@ body {
   margin-right: 50px; */
   margin: 35px;
   align-content: center;
-  vertical-align:middle ;
+  vertical-align: middle;
   rotate: 10deg;
-  
- 
-
 }
 
 h1 {
@@ -459,12 +452,9 @@ h1 {
     text-align: justify;
     line-height: 25px;
     word-spacing: 6px;
-    
   }
 
   .aboutContainer {
-   
-   
     grid-template-columns: auto;
     margin: 10px;
     padding-bottom: 45px;
@@ -472,13 +462,10 @@ h1 {
     text-wrap: pretty;
     grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
     overflow: auto;
-
-  
   }
-
 }
 
-@media screen and (min-width: 960px){
+@media screen and (min-width: 960px) {
   #aboutMainImage {
     width: 300px;
   }
@@ -486,32 +473,102 @@ h1 {
 /*---------------------------------------------------- */
 
 /*------------------------ Style of product.html-------------- */
+#product-Container {
+  display: grid;
 
-.productimage{
-  width: 400px;
+  width: 60%;
+
+  text-wrap: pretty;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  background-color: aqua;
+}
+
+.productBackground {
+  background-color: aqua;
+  align-content: center;
 }
 
 .productDetailed {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin: 20px;
-  font-size: 23px;
-  text-wrap: pretty;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
-  overflow: auto;
-  justify-items:end ;
+  /* display: grid;
+ 
+  grid-template-areas:
+    "mainImage mainImage mainImage "
+    "productImageViewer1 productImageViewer2 productImageViewer3"; */
+
+    display: flex;
+  flex-direction: column;
   align-items: center;
+  margin: 20px;
+  /* justify-items: center; */
+}
+.productElement {
+  background-color: black;
 }
 
-.productimage1 {
+/* FOR GRID TEMPLATE AREA */
+#productImageViewer0 {
+  width: 400px;
+}
+
+.productElement0 {
+  grid-area: mainImage;
+
+  
+}
+
+.productElement1 {
+  grid-area: productImageViewer1;
+
+ 
+}
+
+.productElement2 {
+  grid-area: productImageViewer2;
+}
+.productElement3 {
+  grid-area: productImageViewer3;
+ 
+}
+
+#productImageViewer1,
+#productImageViewer2,
+#productImageViewer3 {
   width: 50px;
 }
 
-.productimage2 {
-  width: 50px;
+.productText {
+  /* background-color: white; */
+  margin: 20px;
+  width: 500px;
 }
 
+#productName {
+  font-size: 45px;
+  margin-bottom: 45px;
+}
 
-.productimage3 {
-  width: 50px;
+#productPrice {
+  font-size: 40px;
+  margin-bottom: 45px;
+}
+
+#productDescription {
+  margin-bottom: 45px;
+}
+
+h3,
+#addToCart {
+  font-size: 35px;
+  justify-items: center;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  text-align: center;
+  border-color: black;
+  cursor: pointer;
+}
+
+#addToCart:hover {
+  background-color: var(--color_8);
 }

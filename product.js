@@ -1,88 +1,101 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Ellenőrizze, hogy a URL tartalmazza-e az id paramétert
   const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id');
+  const productId = urlParams.get("id");
 
   // Ellenőrizze, hogy az id paraméter üres-e vagy nem
-  if(productId) {
+  if (productId) {
     // Ha van id paraméter, akkor kérje le a termék részleteit és jelenítse meg
     fetch("ceramic.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((products) => {
-      const product = products.find(product => product.id === parseInt(productId));
-      if (!product) {
-        throw new Error("Product not found");
-      }
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((products) => {
+        const product = products.find(
+          (product) => product.id === parseInt(productId)
+        );
+        if (!product) {
+          throw new Error("Product not found");
+        }
 
-      // Termék elem létrehozása
-      const productElement = document.createElement("div");
-      productElement.classList.add("productDetailed");
-      productElement.setAttribute("id", "product-" + product.id);
+        // Termék elem létrehozása
+        const productElement = document.createElement("div");
+        productElement.classList.add("productDetailed");
+        productElement.setAttribute("id", "product-" + product.id);
 
-      // Termék adatainak beállítása
-      const productImage = document.createElement("img");
-      productImage.setAttribute("src", product.image);
-      productImage.setAttribute("alt", product.name);
-      productImage.classList.add("productimage");
+        // Termék képeinek létrehozása és hozzáadása
+        const productImageM = document.createElement("div");
+        productImageM.classList.add("productElement0");
+        const productMainImage = document.createElement("img");
+        productMainImage.setAttribute("src", product.image);
+        productMainImage.setAttribute("alt", product.name);
+        productMainImage.setAttribute("id", "productImageViewer0");
+        productImageM.appendChild(productMainImage);
+        productElement.appendChild(productImageM);
 
-      const productImage1 = document.createElement("img");
-      productImage1.setAttribute("src", product.image);
-      productImage1.setAttribute("alt", product.name);
-      productImage1.classList.add("productimage1");
+        const smallImages = document.createElement("div");
+        smallImages.classList.add("smallImages");
+        productElement.appendChild(smallImages);
 
-      const productImage2 = document.createElement("img");
-      productImage2.setAttribute("src", product.image);
-      productImage2.setAttribute("alt", product.name);
-      productImage2.classList.add("productimage2");
 
-      const productImage3 = document.createElement("img");
-      productImage3.setAttribute("src", product.image);
-      productImage3.setAttribute("alt", product.name);
-      productImage3.classList.add("productimage3");
+        for (let i = 1; i < 4; i++) {
+          const productImageContainer = document.createElement("div");
+          productImageContainer.classList.add("productElement" + i);
+          const productImage = document.createElement("img");
+          productImage.setAttribute("src", product.image);
+          productImage.setAttribute("alt", product.name);
+          productImage.setAttribute("id", `productImageViewer${i}`);
+          productImageContainer.appendChild(productImage);
+          productElement.appendChild(productImageContainer);
+        }
 
-      const productName = document.createElement("h2");
-      productName.textContent = product.name;
-      productName.classList.add("productName");
+        // Termék neve, ára és leírása
+        const productText = document.createElement("div");
+        productText.classList.add("productText");
 
-      const productPrice = document.createElement("p");
-      productPrice.textContent = product.price + "€";
-      productPrice.classList.add("productPrice");
+        const productName = document.createElement("h2");
+        productName.textContent = product.name;
+        productName.setAttribute("id", "productName");
+        productText.appendChild(productName);
 
-      const productDescription = document.createElement("p");
-      productDescription.textContent = product.description;
-      productDescription.classList.add("productDescription");
+        const productPrice = document.createElement("p");
+        productPrice.textContent = product.price + "€";
+        productPrice.setAttribute("id", "productPrice");
+        productText.appendChild(productPrice);
 
-      // Termék elem hozzáadása a terméklistához
-      productElement.appendChild(productImage);
-      productElement.appendChild(productImage1);
-      productElement.appendChild(productImage2);
-      productElement.appendChild(productImage3);
-      productElement.appendChild(productName);
-      productElement.appendChild(productPrice);
-      productElement.appendChild(productDescription);
+        const productDescription = document.createElement("p");
+        productDescription.textContent = product.description;
+        productDescription.setAttribute("id", "productDescription");
+        productText.appendChild(productDescription);
 
-      document.getElementById("product-list").appendChild(productElement);
+        const addToCart = document.createElement("h3");
+        addToCart.textContent = "Add to cart";
+        addToCart.setAttribute("id", "addToCart");
+        productText.appendChild(addToCart);
 
-      // Eseménykezelő hozzáadása a termék elemekhez
-      productElement.addEventListener("click", () => {
-        showProductDetails(product);
-      });
-    })
-    .catch((error) =>
-      console.error("There was a problem with the fetch operation:", error)
-    );
-  
+        document
+          .getElementById("product-Container")
+          .appendChild(productElement);
+        document.getElementById("product-Container").appendChild(productText);
+
+        // Eseménykezelő hozzáadása a termék elemekhez
+        productElement.addEventListener("click", () => {
+          showProductDetails(product);
+        });
+      })
+      .catch((error) =>
+        console.error("There was a problem with the fetch operation:", error)
+      );
+
     function showProductDetails(product) {
       // Ide írd a kódodat, ami a termék részletes nézetét megjeleníti
       // Pl.: Átirányítás a termék oldalra
       window.location.href = `product.html?id=${product.id}`;
     }
   } else {
-    console.error('No product id found in URL');
+    console.error("No product id found in URL");
   }
 });
