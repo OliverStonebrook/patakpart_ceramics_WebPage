@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
         smallImages.classList.add("smallImages");
         productElement.appendChild(smallImages);
 
-
         for (let i = 1; i < 4; i++) {
           const productImageContainer = document.createElement("div");
           productImageContainer.classList.add("productElement" + i);
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           productImage.setAttribute("alt", product.name);
           productImage.setAttribute("id", `productImageViewer${i}`);
           productImageContainer.appendChild(productImage);
-          productElement.appendChild(productImageContainer);
+          smallImages.appendChild(productImageContainer);
         }
 
         // Termék neve, ára és leírása

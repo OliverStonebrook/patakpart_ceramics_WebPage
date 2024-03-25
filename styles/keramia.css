@@ -481,11 +481,11 @@ h1 {
   text-wrap: pretty;
   grid-template-columns: auto auto;
   justify-items: center;
-  background-color: aqua;
+  
 }
 
 .productBackground {
-  background-color: aqua;
+  background-color: rgb(206, 185, 30);
   align-content: center;
 }
 
@@ -496,11 +496,18 @@ h1 {
     "mainImage mainImage mainImage "
     "productImageViewer1 productImageViewer2 productImageViewer3"; */
 
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
   /* justify-items: center; */
+}
+
+.smallImages{
+  display: flex;
+  justify-content: space-evenly; /* A kicsi képek egyenletesen oszlanak el a térben */
+  width: 80%; /* Válaszd az igényeidnek megfelelő szélességet */
+  margin: 15px;
 }
 .productElement {
   background-color: black;
@@ -509,18 +516,16 @@ h1 {
 /* FOR GRID TEMPLATE AREA */
 #productImageViewer0 {
   width: 400px;
+  border-style: solid ;
+  border-color: antiquewhite;
 }
 
 .productElement0 {
   grid-area: mainImage;
-
-  
 }
 
 .productElement1 {
   grid-area: productImageViewer1;
-
- 
 }
 
 .productElement2 {
@@ -528,7 +533,6 @@ h1 {
 }
 .productElement3 {
   grid-area: productImageViewer3;
- 
 }
 
 #productImageViewer1,
