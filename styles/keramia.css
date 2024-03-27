@@ -355,6 +355,7 @@ body {
   vertical-align: middle;
   cursor: grab;
   transition: transform 0.2s; /* Animation */
+  margin: 55px;
 }
 
 .mainImage:hover {
@@ -375,8 +376,9 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: center;
-  column-gap: 5%;
-  row-gap: 2%;
+  /* column-gap: 5%;
+  row-gap: 2%; */
+
   padding-top: 3%;
   padding-bottom: 7%;
   grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
@@ -386,7 +388,12 @@ body {
 @media screen and (max-width: 950px) {
   .mainNavigation {
     grid-template-columns: auto;
-    grid-template-rows: -50px;
+    /* grid-template-rows: -50px; */
+    margin: 5px;
+  }
+  .mainImage {
+    width: 50vw;
+  
   }
   .mainBox {
     margin: 50px;
@@ -476,9 +483,16 @@ h1 {
   grid-template-columns: auto auto;
 }
 
+@media screen and (min-width: 960px) {
+  #product-Container {
+    
+    grid-template-columns: auto;
+  }
+}
+
 .productBackground {
   background-color: var(--color_7);
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .productDetailed {
@@ -492,7 +506,7 @@ h1 {
 .smallImages {
   display: flex;
   justify-content: space-evenly; /* A kicsi képek egyenletesen oszlanak el a térben */
-  width: 80%; /* Válaszd az igényeidnek megfelelő szélességet */
+  width: 50%; /* Válaszd az igényeidnek megfelelő szélességet */
   margin: 15px;
 }
 .productElement {
@@ -516,7 +530,7 @@ h1 {
 .productText {
   /* background-color: white; */
   margin: 20px;
-  width: 500px;
+  width: 35vw;
 }
 
 #productName {
