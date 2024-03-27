@@ -393,7 +393,6 @@ body {
   }
   .mainImage {
     width: 50vw;
-  
   }
   .mainBox {
     margin: 50px;
@@ -483,16 +482,10 @@ h1 {
   grid-template-columns: auto auto;
 }
 
-@media screen and (min-width: 960px) {
-  #product-Container {
-    
-    grid-template-columns: auto;
-  }
-}
-
 .productBackground {
   background-color: var(--color_7);
   justify-content: space-evenly;
+  margin-bottom: 25px;
 }
 
 .productDetailed {
@@ -505,8 +498,8 @@ h1 {
 
 .smallImages {
   display: flex;
-  justify-content: space-evenly; /* A kicsi képek egyenletesen oszlanak el a térben */
-  width: 50%; /* Válaszd az igényeidnek megfelelő szélességet */
+  justify-content: space-evenly;
+  width: 50%;
   margin: 15px;
 }
 .productElement {
@@ -525,6 +518,14 @@ h1 {
 #productImageViewer2,
 #productImageViewer3 {
   width: 50px;
+  cursor: pointer;
+}
+
+.productElement1:hover,
+.productElement2:hover,
+.productElement3:hover {
+  filter: opacity(-15);
+  transition: ease 0.5s;
 }
 
 .productText {
@@ -561,4 +562,19 @@ h3,
 
 #addToCart:hover {
   background-color: var(--color_8);
+}
+
+@media screen and (max-width: 960px) {
+  #product-Container {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .productText {
+    display: flex;
+    /* grid-template-columns: 30vw 30vw; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
