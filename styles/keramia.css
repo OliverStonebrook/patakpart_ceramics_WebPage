@@ -527,6 +527,7 @@ h1 {
 #productImageViewer1:hover,
 #productImageViewer2:hover,
 #productImageViewer3:hover {
+  filter: blur(1px);
 }
 
 .productText {
