@@ -421,12 +421,13 @@ body {
   text-wrap: pretty;
   grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
   overflow: auto;
-  justify-items: end;
+  justify-items:center ;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .aboutText {
-  max-width: 300px;
+  max-width: 400px;
   text-align: justify;
   line-height: 35px;
   word-spacing: 6px;
@@ -436,7 +437,7 @@ body {
   /* margin-left: 150px;
   margin-bottom: 200px;
   margin-right: 50px; */
-  margin: 35px;
+  margin: 3px;
   align-content: center;
   vertical-align: middle;
   rotate: 10deg;
@@ -450,12 +451,14 @@ h1 {
   #aboutMainImage {
     width: 250px;
     justify-items: center;
+    margin-bottom: 25px;
   }
   .aboutText {
     max-width: 400px;
     text-align: justify;
     line-height: 25px;
     word-spacing: 6px;
+  
   }
 
   .aboutContainer {
@@ -521,11 +524,9 @@ h1 {
   cursor: pointer;
 }
 
-.productElement1:hover,
-.productElement2:hover,
-.productElement3:hover {
-  filter: opacity(-15);
-  transition: ease 0.5s;
+#productImageViewer1:hover,
+#productImageViewer2:hover,
+#productImageViewer3:hover {
 }
 
 .productText {
@@ -577,5 +578,9 @@ h3,
     align-items: center;
     justify-content: center;
     width: 400px;
+  }
+
+  #productImageViewer0 {
+    width: 80vw;
   }
 }

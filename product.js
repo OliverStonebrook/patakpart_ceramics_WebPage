@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         productImageM.appendChild(productMainImage);
         productElement.appendChild(productImageM);
 
+        //small images
         const smallImages = document.createElement("div");
         smallImages.classList.add("smallImages");
         productElement.appendChild(smallImages);
@@ -44,7 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
           const productImageContainer = document.createElement("div");
           productImageContainer.classList.add("productElement" + i);
           const productImage = document.createElement("img");
-          productImage.setAttribute("src", product.image);
+          if ((i == 1)) {
+            productImage.setAttribute("src", product.image1);
+          } else if ((i == 2)) {
+            productImage.setAttribute("src", product.image2);
+          } else if ((i == 3)) {
+            productImage.setAttribute("src", product.image3);
+          }
+
           productImage.setAttribute("alt", product.name);
           productImage.setAttribute("id", `productImageViewer${i}`);
           productImageContainer.appendChild(productImage);
