@@ -6,12 +6,12 @@ fetch("ceramic.json")
     return response.json();
   })
   .then((products) => {
-    const productListContainer = document.getElementById("product-list");
+    const productListContainer = document.getElementById("illustrationContainer");
     products.forEach((product) => {
       // Termék elem létrehozása
-      if (product.id >= 0 && product.id < 100) {
+      if (product.id > 100) {
       const productElement = document.createElement("div");
-      productElement.classList.add("product");
+      productElement.classList.add("illustration");
       productElement.setAttribute(
         "id",
         product.name.toLowerCase().replace(/\s+/g, "-")
@@ -21,26 +21,25 @@ fetch("ceramic.json")
       const productImage = document.createElement("img");
       productImage.setAttribute("src", product.image);
       productImage.setAttribute("alt", product.name);
-      productImage.classList.add("image");
+      productImage.classList.add("illustrationImage");
 
       const productName = document.createElement("h2");
       productName.textContent = product.name;
-      productName.classList.add("itemName");
+      productName.classList.add("illustrationName");
 
-      const productPrice = document.createElement("p");
-      productPrice.textContent = product.price + "€";
-      productPrice.classList.add("itemPrice");
-   
+      const productDescription = document.createElement("h4");
+      productDescription.textContent = product.description;
+      productDescription.classList.add("illustrationDes");
+
+      
+
       // Termék elem hozzáadása a terméklistához
       productElement.appendChild(productImage);
       productElement.appendChild(productName);
-      productElement.appendChild(productPrice);
+      productElement.appendChild(productDescription);
       productListContainer.appendChild(productElement);
     
-      // Eseménykezelő hozzáadása a termék elemekhez
-      productElement.addEventListener("click", () => {
-        showProductDetails(product);
-      });
+
       }
     });
   })

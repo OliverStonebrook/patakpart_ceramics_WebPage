@@ -63,5 +63,43 @@
     "image2": "images/product21.jpeg",
     "image3": "images/product33.jpeg",
     "description": "description"
+  },
+
+ 
+  {
+    "id": 101,
+    "name": "Illustration 1",
+    "image": "images/illustration/illust01.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti libero dolor, sit obcaecati laborum eos, aspernatur"
+  },
+
+  {
+    "id": 102,
+    "name": "Illustration 2",
+    "image": "images/illustration/illust02.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti libero dolor, sit obcaecati laborum eos, aspernatur"
+  },
+
+  {
+    "id": 103,
+    "name": "Illustration 3",
+    "image": "images/illustration/illust03.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti libero dolor, sit obcaecati laborum eos, aspernatur"
+  },
+
+  {
+    "id": 104,
+    "name": "Illustration 4",
+    "image": "images/illustration/illust04.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti libero dolor, sit obcaecati laborum eos, aspernatur"
+  },
+
+  {
+    "id": 105,
+    "name": "Illustration 5",
+    "image": "images/illustration/illust05.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti libero dolor, sit obcaecati laborum eos, aspernatur"
+
   }
+
 ]
