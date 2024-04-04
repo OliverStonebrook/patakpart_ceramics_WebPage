@@ -593,7 +593,7 @@ h3,
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-evenly;
-  margin-bottom: 100px ;
+  margin-bottom: 100px;
 }
 
 .illustrationImage {
@@ -601,8 +601,7 @@ h3,
   background-color: var(--color_4);
 }
 .illustration {
-  margin-bottom: 50px ;
- 
+  margin-bottom: 50px;
 }
 
 .illustrationName {
@@ -622,10 +621,93 @@ h3,
   font-style: italic;
 }
 
-
 @media screen and (max-width: 960px) {
   #illustrationContainer {
     grid-template-columns: auto;
     justify-content: center;
   }
+}
+
+/*---------------------------------------------------- */
+
+/*------------------------ Style of stories.html-------------- */
+
+.imgStrsL {
+  float: left; /* A kép bal oldalán fut körbe a szöveg */
+  margin-right: 20px; /* Távolság a képtől */
+  max-width: 200px; /* Maximális képszélesség */
+  margin-bottom: 20px; /* Szükség esetén adhatsz alsó margót is a képhez */
+}
+
+.imgStrsR {
+  float: right; /* A kép bal oldalán fut körbe a szöveg */
+  margin-left: 20px; /* Távolság a képtől */
+  max-width: 200px; /* Maximális képszélesség */
+  margin-bottom: 20px; /* Szükség esetén adhatsz alsó margót is a képhez */
+}
+
+/* Egy kis tisztítás a margin-bottom miatt */
+.StoriesElementL {
+
+  width: 60vw;
+  overflow: hidden;
+  margin: 15px;
+  background-color: var(--color_4);
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-right: 55px;
+  animation: scrollAnimation 10s linear ;
+}
+.StoriesElementR {
+  width: 60vw;
+  overflow: hidden;
+  margin: 15px;
+  background-color: var(--color_4);
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 55px;
+  animation: scrollAnimation 10s linear ;
+}
+
+.storiesText {
+  margin-top: 0; /* Ellenőrzi a fejlécek fölötti margót */
+  text-align: justify;
+  font-size: 18px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+
+.storyTitle {
+  font-size: 25px;
+}
+
+.storiesContainer {
+  display: grid;
+
+  justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+  .StoriesElementL.StoriesElementR {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@keyframes scrollAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(10%);
+  }
+  from {
+    transform: translateX(10%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+
 }
