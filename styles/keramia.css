@@ -147,6 +147,7 @@ body {
   font-family: var(--fontFamily);
 }
 
+/* MARK: Header */
 .headContainer {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
@@ -214,7 +215,7 @@ body {
   padding-left: 50px;
   position: relative;
 }
-
+/* MARK: Items block */
 /* -----------------Product items block setting --------------------*/
 .listOfitems {
   display: grid;
@@ -292,19 +293,22 @@ body {
     column-gap: 15%;
   }
 }
-
+/* MARK: Footer */
 /* Footer settings */
 
 #footLogo {
   width: 150px;
 }
 #socialMediaLink {
-  width: 10vw;
-  cursor: grab;
+  width: 5vw;
+  cursor:grabbing ;
 }
 
 #footContact {
-  text-decoration: solid;
+font-style:italic ;
+  letter-spacing: 4px;
+  word-spacing: 3px;
+ 
   width: 100px;
   font-size: 30px;
   color: rgb(224, 133, 13);
@@ -330,12 +334,7 @@ body {
    */
 }
 
-.footClass {
-  /* vertical-align: middle;
-  justify-content: center;
 
-  width: minmax(auto, auto, auto);*/
-}
 
 #footContact,
 #footLogo,
@@ -345,8 +344,8 @@ body {
 }
 
 /*---------------------------------------------------- */
-
-/*------------------------ Style of main.html-------------- */
+/* MARK: Index */
+/*------------------------ Style of index.html-------------- */
 
 .mainImage {
   width: 30vw;
@@ -407,7 +406,7 @@ body {
 }
 
 /*---------------------------------------------------- */
-
+/* MARK: About */
 /*------------------------ Style of about.html-------------- */
 
 #aboutMainImage {
@@ -478,7 +477,7 @@ h1 {
   }
 }
 /*---------------------------------------------------- */
-
+/* MARK: Product */
 /*------------------------ Style of product.html-------------- */
 #product-Container {
   display: grid;
@@ -587,7 +586,7 @@ h3,
 }
 
 /*---------------------------------------------------- */
-
+/* MARK: illustration */
 /*------------------------ Style of illustration.html-------------- */
 
 #illustrationContainer {
@@ -630,7 +629,7 @@ h3,
 }
 
 /*---------------------------------------------------- */
-
+/* MARK:Stories */
 /*------------------------ Style of stories.html-------------- */
 
 .imgStrsL {
@@ -673,7 +672,7 @@ h3,
 }
 
 .storiesText {
-  margin-top: 0; /* Ellenőrzi a fejlécek fölötti margót */
+  margin-top: 0; 
   text-align: justify;
   font-size: 18px;
   letter-spacing: 2px;
